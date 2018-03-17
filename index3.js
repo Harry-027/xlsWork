@@ -1,6 +1,7 @@
 var xlsx = require('js-xlsx');
 var path = require('path');
 
+// using js-xlsx
 // creating a new workbook and worksheet and then writing a json data into workbook
 
 function basicExcel() {
