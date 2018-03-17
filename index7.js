@@ -48,7 +48,20 @@ addConfig().then(() => {
         workbook.xlsx.writeFile('Sheet3.xlsx')
             .then(function () { });
     })
-})
+});
+
+activeWorksheet.getColumn(1).fill = {
+    type: 'gradient',
+    gradient: 'angle',
+    degree: 0,
+    stops: [
+        { position: 0, color: { argb: 'FF0000FF' } },
+        { position: 0.5, color: { argb: 'FFFFFFFF' } },
+        { position: 1, color: { argb: 'FF0000FF' } }
+    ]
+}
+
+//activeWorksheet.getRow(1).commit();
 
 activeWorksheet.spliceColumns(1, 0, ...arr);
 activeWorksheet.spliceRows(1, 0, ...arr);
